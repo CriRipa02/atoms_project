@@ -5,33 +5,51 @@
       <a>Abbonati</a>
     </div>
     <div class="flex">
-      <img class="mr-2" src="../assets/account.svg" />
+      <img class="mr-2" src="../assets/account.svg" alt="Utente" />
       <a>Accedi</a>
     </div>
   </div>
   <div
     class="border-y border-black rounded-none flex justify-between items-center"
   >
-    <img class="border-x border-black p-9" src="../assets/burger.svg" />
-    <img class="border-x border-black p-9" src="../assets/search.svg" />
+    <img class="border-r border-black p-9" src="../assets/burger.svg" alt="Menù" />
+    <img class="border-l border-black p-9" src="../assets/search.svg" alt="Cerca" />
   </div>
-  <div class="lg:flex sm:hidden px-10">
+  <div class="lg:flex sm:hidden border-b border-black rounded-none px-10">
     <div class="flex flex-wrap w-full mr-2.5">
       <div
         :class="idxTopic != topic.length - 1 ? 'mr-8' : ''"
         v-for="(topic, idxTopic) in topics"
-        :key="idxTopic"
+        :key="topic.id"
         @click="setTopic(topic)"
       >
-        <h4 class="py-6">{{ topic.text }}</h4>
+        <h3 class="py-6">{{ topic.text }}</h3>
         <img
           class="relative mt-[-9px]"
-          :class="topicSelected && topicSelected.name == topic.name ? 'opacity-1' : 'opacity-0'"
+          :class="
+            topicSelected && topicSelected.id == topic.id
+              ? 'opacity-1'
+              : 'opacity-0'
+          "
           src="../assets/selection.png"
         />
       </div>
     </div>
     <img src="../assets/toggle.svg" />
+  </div>
+  <div class="flex lg:flex-row sm:flex-col justify-between bg-grey py-16 px-10">
+    <h1>{{ topicSelected.text }}</h1>
+    <div>
+      <button
+        :class="idxTopic != topic.length - 1 ? 'mr-4' : ''"
+        class="tag py-3 px-4"
+        v-for="(topic, idxTopic) in topics.filter(item => item.id !== topicSelected.id)"
+        :key="topic.id"
+        :style="`background-color: ${topic.color}`"
+      >
+        {{ topic.text }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -40,19 +58,19 @@ import { ref } from "vue";
 
 const topics = ref([
   { id: 0, name: "all", text: "Tutti i temi" },
-  { id: 1, name: "env", text: "Ambiente" }, 
+  { id: 1, name: "env", text: "Ambiente", color: "#E2F1E8" },
   { id: 2, name: "eco", text: "Economia" },
-  { id: 3, name: "world", text: "Mondo" },
+  { id: 3, name: "world", text: "Mondo", color: "#F1DADA" },
   { id: 4, name: "no-prof", text: "Non Profit" },
-  { id: 5, name: "politics", text: "Politica" },
+  { id: 5, name: "politics", text: "Politica", color: "#F1F1E2" },
   { id: 6, name: "society", text: "Società" },
-  { id: 7, name: "welfare", text: "Welfare" }
+  { id: 7, name: "welfare", text: "Welfare" },
 ]);
-const topicSelected = ref({});
+const topicSelected = ref(topics.value[0]);
 
 const setTopic = (topic) => {
   topicSelected.value = topic;
-}
+};
 </script>
 
 <style scoped>
