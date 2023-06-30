@@ -28,6 +28,7 @@
   <div class="lg:flex sm:hidden border-b border-black rounded-none px-10">
     <div class="flex flex-wrap w-full mr-2.5">
       <div
+    class="cursor-pointer"
         :class="idxTopic != topic.length - 1 ? 'mr-8' : ''"
         v-for="(topic, idxTopic) in topics"
         :key="topic.id"
