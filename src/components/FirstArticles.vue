@@ -4,7 +4,10 @@
       <button class="tag py-1 px-3">{{ articles[0].tag }}</button>
       <h2 class="max-w-[70%] my-6">{{ articles[0].title }}</h2>
       <div class="flex">
-        <img class="reporter-img mr-4" src="../assets/firstArticles/1-reporter.jpg" />
+        <img
+          class="reporter-img mr-4"
+          src="../assets/firstArticles/1-reporter.jpg"
+        />
         <div class="text-white">
           <span class="block text-sm">Di {{ articles[0].author }}</span>
           <span>{{ articles[0].date }}</span>
@@ -24,7 +27,10 @@
         <h2 class="max-w-[700px] my-6 text-[32px] leading-[46px]">
           {{ articles[1].title }}
         </h2>
-        <img class="reporter-img mb-4" src="../assets/firstArticles/2-reporter.png" />
+        <img
+          class="reporter-img mb-4"
+          src="../assets/firstArticles/2-reporter.png"
+        />
         <div class="text-white mb-6">
           <span class="block text-sm">Di {{ articles[1].author }}</span>
           <span>{{ articles[1].date }}</span>
@@ -33,45 +39,51 @@
       </div>
     </div>
     <div class="w-[40%]">
-    <div class="third-article mb-px">
-      <div class="mb-px">
-        <button
-          class="tag py-1 px-3 mb-6"
-          :style="`background-color: ${articles[2].color}`"
-        >
-          {{ articles[2].tag }}
-        </button>
-        <img src="../assets/firstArticles/sound.svg" />
-        <h2 class="my-6 text-2xl max-w-[380px]">
-          {{ articles[2].title }}
-        </h2>
-        <img class="reporter-img mb-4" src="../assets/firstArticles/3-reporter.jpg" />
-        <div class="text-white mb-6">
-          <span class="block text-sm">Di {{ articles[2].author }}</span>
-          <span>{{ articles[2].date }}</span>
+      <div class="third-article mb-px">
+        <div class="mb-px">
+          <button
+            class="tag py-1 px-3 mb-6"
+            :style="`background-color: ${articles[2].color}`"
+          >
+            {{ articles[2].tag }}
+          </button>
+          <img src="../assets/firstArticles/sound.svg" />
+          <h2 class="my-6 text-2xl">
+            {{ articles[2].title }}
+          </h2>
+          <img
+            class="reporter-img mb-4"
+            src="../assets/firstArticles/3-reporter.jpg"
+          />
+          <div class="text-white mb-6">
+            <span class="block text-sm">Di {{ articles[2].author }}</span>
+            <span>{{ articles[2].date }}</span>
+          </div>
+          <img src="../assets/arrow-right-white.svg" />
         </div>
-        <img src="../assets/arrow-right-white.svg" />
       </div>
-    </div>
-    <div class="third-article forth-article">
-      <div class="mb-px">
-        <button
-          class="tag py-1 px-3"
-          :style="`background-color: ${articles[3].color}`"
-        >
-          {{ articles[3].tag }}
-        </button>
-        <h2 class="my-6 text-2xl max-w-[380px]">
-          {{ articles[3].title }}
-        </h2>
-        <img class="reporter-img mb-4" src="../assets/firstArticles/4-reporter.jpg" />
-        <div class="text-white mb-6">
-          <span class="block text-sm">Di {{ articles[3].author }}</span>
-          <span>{{ articles[3].date }}</span>
+      <div class="third-article forth-article">
+        <div class="mb-px">
+          <button
+            class="tag py-1 px-3"
+            :style="`background-color: ${articles[3].color}`"
+          >
+            {{ articles[3].tag }}
+          </button>
+          <h2 class="my-6 text-2xl max-w-[380px]">
+            {{ articles[3].title }}
+          </h2>
+          <img
+            class="reporter-img mb-4"
+            src="../assets/firstArticles/4-reporter.jpg"
+          />
+          <div class="text-white mb-6">
+            <span class="block text-sm">Di {{ articles[3].author }}</span>
+            <span>{{ articles[3].date }}</span>
+          </div>
+          <img src="../assets/arrow-right-white.svg" />
         </div>
-        <img src="../assets/arrow-right-white.svg" />
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -106,8 +118,7 @@ const articles = [
   {
     id: 3,
     tag: "ucraina",
-    title:
-      "Nelle città italiane tutti in piazza per e con Kiev",
+    title: "Nelle città italiane tutti in piazza per e con Kiev",
     author: "Anna Spena",
     date: "14 Luglio 2022 ",
     color: "#F1DADA",
@@ -136,9 +147,10 @@ const articles = [
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  padding: 41px 40px;
+  padding: 4vh 40px;
 }
 .third-article {
+  height: 55%;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../assets/firstArticles/3-article.jpg");
   background-position-y: center;
@@ -146,12 +158,13 @@ const articles = [
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  padding: 46px 40px 48px 40px;
+  padding: 0 40px 4vh 40px;
 }
 .forth-article {
+  height: 45%;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../assets/firstArticles/4-article.png");
-  padding: 41px 40px 44px 40px;
+  padding: 0 40px 4vh 40px;
 }
 .reporter-img {
   border-radius: 48px;
