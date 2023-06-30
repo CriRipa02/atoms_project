@@ -4,7 +4,7 @@
       <button class="tag py-1 px-3">{{ articles[0].tag }}</button>
       <h2 class="max-w-[70%] my-6">{{ articles[0].title }}</h2>
       <div class="flex">
-        <img class="reporter-img mr-4" src="../assets/news/1-reporter.jpg" />
+        <img class="reporter-img mr-4" src="../assets/firstArticles/1-reporter.jpg" />
         <div class="text-white">
           <span class="block text-sm">Di {{ articles[0].author }}</span>
           <span>{{ articles[0].date }}</span>
@@ -24,16 +24,16 @@
         <h2 class="max-w-[700px] my-6 text-[32px] leading-[46px]">
           {{ articles[1].title }}
         </h2>
-        <img class="reporter-img mb-4" src="../assets/news/2-reporter.png" />
+        <img class="reporter-img mb-4" src="../assets/firstArticles/2-reporter.png" />
         <div class="text-white mb-6">
           <span class="block text-sm">Di {{ articles[1].author }}</span>
           <span>{{ articles[1].date }}</span>
         </div>
-        <img src="../assets/arrow-right.svg" />
+        <img src="../assets/arrow-right-white.svg" />
       </div>
     </div>
     <div class="w-[40%]">
-    <div class="third-article">
+    <div class="third-article mb-px">
       <div class="mb-px">
         <button
           class="tag py-1 px-3 mb-6"
@@ -41,19 +41,19 @@
         >
           {{ articles[2].tag }}
         </button>
-        <img src="../assets/news/sound.svg" />
-        <h2 class="my-6 text-2xl">
+        <img src="../assets/firstArticles/sound.svg" />
+        <h2 class="my-6 text-2xl max-w-[380px]">
           {{ articles[2].title }}
         </h2>
-        <img class="reporter-img mb-4" src="../assets/news/3-reporter.jpg" />
+        <img class="reporter-img mb-4" src="../assets/firstArticles/3-reporter.jpg" />
         <div class="text-white mb-6">
           <span class="block text-sm">Di {{ articles[2].author }}</span>
           <span>{{ articles[2].date }}</span>
         </div>
-        <img src="../assets/arrow-right.svg" />
+        <img src="../assets/arrow-right-white.svg" />
       </div>
     </div>
-    <div class="third-article">
+    <div class="third-article forth-article">
       <div class="mb-px">
         <button
           class="tag py-1 px-3"
@@ -61,71 +61,19 @@
         >
           {{ articles[3].tag }}
         </button>
-        <h2 class="my-6 text-2xl">
+        <h2 class="my-6 text-2xl max-w-[380px]">
           {{ articles[3].title }}
         </h2>
-        <img class="reporter-img mb-4" src="../assets/news/4-reporter.jpg" />
+        <img class="reporter-img mb-4" src="../assets/firstArticles/4-reporter.jpg" />
         <div class="text-white mb-6">
           <span class="block text-sm">Di {{ articles[3].author }}</span>
           <span>{{ articles[3].date }}</span>
         </div>
-        <img src="../assets/arrow-right.svg" />
+        <img src="../assets/arrow-right-white.svg" />
       </div>
     </div>
     </div>
   </div>
-  <!--<div class="relative overflow-hidden max-h-full mb-px">
-    <img src="../assets/news/1-article.jpg" alt="Articolo principale" />
-    <div class="absolute bottom-11 left-10">
-      <button class="tag py-1 px-3">{{ articles[0].tag }}</button>
-      <h2 class="max-w-[700px] my-6">{{ articles[0].title }}</h2>
-      <div class="flex">
-        <img class="reporter-img mr-4" src="../assets/news/1-reporter.jpg" />
-        <div class="text-white">
-          <span class="block text-sm mb-2">Di {{ articles[0].author }}</span>
-          <span>{{ articles[0].date }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="relative overflow-hidden max-w-[60%] mb-px">
-    <img src="../assets/news/2-article.png" alt="Secondo articolo" />
-    <div class="absolute bottom-[41px] left-10">
-      <button class="tag py-1 px-3" :style="`background-color: ${articles[1].color}`">
-        {{ articles[1].tag }}
-      </button>
-      <h2 class="max-w-[700px] my-6 text-[32px] leading-[46px]">
-        {{ articles[1].title }}
-      </h2>
-      <div class="flex mb-6">
-        <img class="reporter-img mr-4" src="../assets/news/2-reporter.png" />
-        <div class="text-white">
-          <span class="block text-sm mb-2">Di {{ articles[1].author }}</span>
-          <span>{{ articles[1].date }}</span>
-        </div>
-      </div>
-      <img src="../assets/arrow-right.svg" />
-    </div>
-  </div>
-  <div class="relative overflow-hidden max-w-[825px]">
-    <img src="../assets/news/3-article.jpg" alt="Terzo articolo" />
-    <div class="absolute bottom-[41px] left-10">
-      <button class="tag py-1 px-3" :style="`background-color: ${articles[2].color}`">
-        {{ articles[2].tag }}
-      </button>
-      <h2 class="max-w-[700px] my-6 text-[32px] leading-[46px]">
-        {{ articles[2].title }}
-      </h2>
-      <div class="flex mb-6">
-        <img class="reporter-img mr-4" src="../assets/news/2-reporter.jpg" />
-        <div class="text-white">
-          <span class="block text-sm mb-2">Di {{ articles[2].author }}</span>
-          <span>{{ articles[2].date }}</span>
-        </div>
-      </div>
-      <img src="../assets/arrow-right.svg" />
-    </div>
-  </div>-->
 </template>
 
 <script setup>
@@ -150,7 +98,7 @@ const articles = [
     id: 2,
     tag: "esperimenti",
     title:
-      "Gli startupper? Li trovi al bistrot.<br>Così il DumBo incuba relazioni",
+      "Gli startupper? Li trovi al bistrot. Così il DumBo incuba relazioni",
     author: "Diletta Grella",
     date: "14 Luglio 2022",
     color: "#E2F0F1",
@@ -174,7 +122,7 @@ const articles = [
   width: 100%;
   height: 506px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../assets/news/1-article.jpg");
+    url("../assets/firstArticles/1-article.jpg");
   background-position-y: center;
   background-size: cover;
 }
@@ -182,7 +130,7 @@ const articles = [
   width: 60%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../assets/news/2-article.png");
+    url("../assets/firstArticles/2-article.png");
   background-position-y: center;
   background-position-x: center;
   background-size: cover;
@@ -192,17 +140,18 @@ const articles = [
 }
 .third-article {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../assets/news/3-article.jpg");
+    url("../assets/firstArticles/3-article.jpg");
   background-position-y: center;
   background-position-x: center;
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  padding: 48px 40px;
+  padding: 46px 40px 48px 40px;
 }
 .forth-article {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../assets/news/4-article.png");
+    url("../assets/firstArticles/4-article.png");
+  padding: 41px 40px 44px 40px;
 }
 .reporter-img {
   border-radius: 48px;

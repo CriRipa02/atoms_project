@@ -14,8 +14,8 @@ export default {
         'eggshell': '#F4F1DE',
       },
       fontFamily: {
-        'anybody': ['Cinzel', 'serif'],
-        'raleway': ['Cinzel', 'serif']
+        'anybody': ['AnyBody', 'Cursive'],
+        'raleway': ['Raleway', 'Sans-serif']
       },
     },
     screens: {

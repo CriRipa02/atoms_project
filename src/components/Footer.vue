@@ -3,7 +3,7 @@
   <div class="flex lg:flex-row sm:flex-col" >
     <a class="mr-6" v-for="(note, idxNote) in notes" :key="idxNote" :href="note.link" target="_blank">{{ note.text }}</a>
   </div>
-  <h4 class="lg:mt-0 sm:mt-6">© 1994-2022 Vita Società Editoriale S.p.A.</h4>
+  <label class="lg:mt-0 sm:mt-6">© 1994-2022 Vita Società Editoriale S.p.A.</label>
 </div>
 </template>
 

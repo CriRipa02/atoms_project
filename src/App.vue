@@ -1,12 +1,14 @@
 <template>
   <Header />
-  <News />
+  <FirstArticles />
+  <Support />
   <Footer />
 </template>
 
 <script setup>
   import Header from "./components/Header.vue";
-  import News from "./components/News.vue";
+  import FirstArticles from "./components/FirstArticles.vue";
+  import Support from "./components/Support.vue";
   import Footer from "./components/Footer.vue";
 </script>
 
